@@ -1,0 +1,6 @@
+
+<%= content_tag("h1", "Stories") %>
+
+<% @stories.each do |story| %>
+	<%= link_to story.name, story %>
+<% end %>
