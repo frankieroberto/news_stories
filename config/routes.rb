@@ -1,5 +1,7 @@
 NewsStories::Application.routes.draw do
 
+  resources :events
+
   resources :stories
 
   # You can have the root of your site routed with "root"

@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  start: 2011-01-27
+  end: 2011-01-27
+  name: MyString
+
+two:
+  start: 2011-01-27
+  end: 2011-01-27
+  name: MyString
