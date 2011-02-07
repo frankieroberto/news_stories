@@ -1,7 +1,4 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-one:
-  name: MyString
-
-two:
-  name: MyString
+london_7_july_bombings:
+  name: 7 July 2005 London bombings

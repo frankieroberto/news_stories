@@ -1,11 +1,6 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-one:
-  start: 2011-01-27
-  end: 2011-01-27
-  name: MyString
-
-two:
-  start: 2011-01-27
-  end: 2011-01-27
-  name: MyString
+london_underground_bombings:
+  start: 2005-07-07
+  end: 2005-07-07
+  name: Bombing of three London Underground tube trains

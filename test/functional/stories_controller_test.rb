@@ -1,8 +1,17 @@
 require 'test_helper'
 
 class StoriesControllerTest < ActionController::TestCase
-  # Replace this with your real tests.
-  test "the truth" do
-    assert true
+
+  context "When viewing the add story page" do
+    
+    setup do
+      sign_in users(:frankieroberto)
+      get :new
+    end
+    
+    should respond_with :success
+    should assign_to :story
   end
+
+
 end
