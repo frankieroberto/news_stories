@@ -1,1 +1,7 @@
 <%= content_tag("h1", "News") %>
+
+<%= content_tag("ul") do %>
+	<% @stories.each do |story| %>
+		<%= content_tag("li", link_to(story.name, story)) %>
+	<% end %>
+<% end %>
