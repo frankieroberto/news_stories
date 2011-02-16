@@ -21,6 +21,7 @@ class EventsController < ApplicationController
     if params[:story_id]
       @story = Story.find(params[:story_id])
       @event.stories << @story
+      @story.touch
     end
     
     if @event.save
