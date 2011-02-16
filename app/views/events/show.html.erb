@@ -1,0 +1,9 @@
+<%= content_tag("h1", @event.name) %>
+
+<% if @event.stories.size > 0 %>
+	<% @event.stories.each do |story| %>
+		<%= content_tag "p" do %>
+			<%= h("Part of ") + link_to(story.name, story) %>
+		<% end %>
+	<% end %>
+<% end %>

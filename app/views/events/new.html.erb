@@ -1,0 +1,27 @@
+<%= content_tag("h1", "Add event" + (@story ? " to " + @story.name : "")) %>
+
+<%= form_for @event do |f| %>
+	
+	<%= content_tag("div") do %>
+		
+		<%= content_tag("div") do %>
+			<%= f.label :name%>
+			<%= f.text_field :name %>
+		<% end %>
+
+		<%= content_tag("div") do %>		
+			<%= f.label :start %>
+			<%= f.date_select :start %>
+		<% end %>
+
+		<%= content_tag("div") do %>		
+			<%= f.label :end %>
+			<%= f.date_select :end %>
+		<% end %>
+				
+		<%= hidden_field_tag :story_id, @story.id %>
+	<% end %>
+
+	<%= f.submit "Add" %>
+	
+<% end %>
