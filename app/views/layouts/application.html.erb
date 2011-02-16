@@ -13,7 +13,12 @@
 	<% else %>
 	  <%= link_to('Login', new_user_session_path)  %>  
 	<% end %>
-
+	
+	<nav>
+	<%= link_to "Stories", stories_path %>
+	<%= link_to "Events", events_path %>
+	</nav>
+	
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
 
