@@ -6,5 +6,8 @@ class Event < ActiveRecord::Base
 
   has_many :story_connections
   has_many :stories, :through => :story_connections
+  
+  scope :recent, :order => "created_at DESC"
+  
 
 end

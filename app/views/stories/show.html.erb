@@ -1,10 +1,16 @@
 
 <%= content_tag("h1", @story.name) %>
 
-<%= content_tag("h2", "Events") %>
 
-<% @story.events.each do |event| %>
-	<%= link_to event.name, event %>
+<% if @story.events.size > 0 %>
+
+	<%= content_tag("h2", "Timeline") %>
+
+	<% @story.events.recent.each do |event| %>
+		<%= content_tag("p") do %>
+			<%= link_to event.name, event %> <%= dates(event) %>
+		<% end %>
+	<% end %>
 <% end %>
 
 <%= link_to "Add event", new_event_path(:story_id => @story.id) %>
