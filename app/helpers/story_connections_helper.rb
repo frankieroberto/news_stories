@@ -1,0 +1,2 @@
+module StoryConnectionsHelper
+end

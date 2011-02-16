@@ -1,0 +1,5 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+    story: london_7_july_bombings
+    event: london_underground_bombings

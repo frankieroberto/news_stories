@@ -1,6 +1,12 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 london_underground_bombings:
-  start: 2005-07-07
-  end: 2005-07-07
-  name: Bombing of three London Underground tube trains
+    start: 2005-07-07
+    end: 2005-07-07
+    name: Bombing of three London Underground tube trains
+  
+london_bus_bombing:
+    start: 2005-07-07
+    end: 2005-07-07
+    name: Bombing of three London Underground tube trains
+    

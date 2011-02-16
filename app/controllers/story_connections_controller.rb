@@ -1,0 +1,2 @@
+class StoryConnectionsController < ApplicationController
+end
