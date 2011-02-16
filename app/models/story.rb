@@ -5,4 +5,6 @@ class Story < ActiveRecord::Base
   has_many :story_connections
   has_many :events, :through => :story_connections
 
+  scope :recent, :order => "created_at DESC"
+
 end

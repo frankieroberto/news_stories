@@ -7,7 +7,7 @@ class StoriesController < ApplicationController
   end
   
   def index
-    @stories = Story.all
+    @stories = Story.recent(:limit => 10)
   end
   
   def new
