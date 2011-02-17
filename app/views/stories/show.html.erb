@@ -21,3 +21,5 @@
 <% else %>
 	<%= button_to "Follow", followings_path(:story_id => @story.id) %>
 <% end %>
+
+<%= button_to "Delete", story_path(@story), :method => :delete, :confirm => "Are you sure?" %>

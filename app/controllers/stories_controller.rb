@@ -17,7 +17,7 @@ class StoriesController < ApplicationController
     @story = Story.new
   end
   
-  def create_dg
+  def create
     @story = Story.new(params[:story])
     if @story.save
       redirect_to @story
@@ -36,6 +36,14 @@ class StoriesController < ApplicationController
       else
         render "rename_stories/show"
       end
+    end
+  end
+  
+  def destroy
+    @story = Story.find(params[:id])
+    
+    if @story.destroy
+      redirect_to stories_path
     end
   end
   
