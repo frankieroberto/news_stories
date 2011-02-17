@@ -27,4 +27,16 @@ class StoriesController < ApplicationController
       
   end
   
+  def update
+    @story = Story.new(params[:id])
+    
+    if params[:story][:name]
+      if @story.update_name(params[:story][:name])
+        redirect_to story_path(@story)
+      else
+        render "rename_stories/show"
+      end
+    end
+  end
+  
 end

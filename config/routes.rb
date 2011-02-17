@@ -8,7 +8,9 @@ NewsStories::Application.routes.draw do
 
   resources :events
 
-  resources :stories
+  resources :stories do
+    resource :rename, :controller => :rename_stories
+  end
 
   root :to => "homepage#show"
 

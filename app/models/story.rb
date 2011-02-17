@@ -10,4 +10,10 @@ class Story < ActiveRecord::Base
   scope :recent, :order => "created_at DESC"
   
 
+  def update_name(name)
+    
+    self.update_attributes(:name => name)
+    
+  end
+
 end

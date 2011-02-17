@@ -1,0 +1,12 @@
+<%= content_tag("h1", "Rename " + @story.name)%>
+
+<%= form_for @story do |f| %>
+
+	<p>
+	<%= f.label :name %>
+	<%= f.text_field :name %>
+	</p>
+	
+	<%= f.submit :rename %>
+
+<% end %>
