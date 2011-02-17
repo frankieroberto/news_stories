@@ -17,7 +17,7 @@ class StoriesController < ApplicationController
     @story = Story.new
   end
   
-  def create
+  def create_dg
     @story = Story.new(params[:story])
     if @story.save
       redirect_to @story
@@ -28,7 +28,7 @@ class StoriesController < ApplicationController
   end
   
   def update
-    @story = Story.new(params[:id])
+    @story = Story.find(params[:id])
     
     if params[:story][:name]
       if @story.update_name(params[:story][:name])

@@ -1,6 +1,8 @@
 <%= content_tag("h1", "Rename " + @story.name)%>
 
-<%= form_for @story do |f| %>
+<%= @story.errors.full_messages %>
+
+<%= form_for @story, :method => :put do |f| %>
 
 	<p>
 	<%= f.label :name %>

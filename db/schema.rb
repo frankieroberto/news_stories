@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110217000320) do
+ActiveRecord::Schema.define(:version => 20110217003237) do
 
   create_table "events", :force => true do |t|
     t.date     "start"
@@ -22,6 +22,13 @@ ActiveRecord::Schema.define(:version => 20110217000320) do
 
   create_table "followings", :force => true do |t|
     t.integer  "user_id"
+    t.integer  "story_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "previous_story_names", :force => true do |t|
+    t.string   "name"
     t.integer  "story_id"
     t.datetime "created_at"
     t.datetime "updated_at"

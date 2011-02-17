@@ -1,6 +1,7 @@
 
 <%= content_tag("h1", @story.name) %>
 
+<%= link_to "rename", story_rename_path(@story) %>
 
 <% if @story.events.size > 0 %>
 

@@ -1,0 +1,9 @@
+<%= content_tag("h1", "Previous names for " + @story.name) %>
+
+<%= content_tag("ol") do %>
+	<% @previous_names.each do |previous_name| %>
+		<%= content_tag("li") do %>
+			<%= previous_name.name %>
+		<% end %>
+	<% end %>
+<% end %>
