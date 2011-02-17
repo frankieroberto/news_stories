@@ -1,5 +1,7 @@
 NewsStories::Application.routes.draw do
 
+  resources :followings
+
   resources :story_connections
 
   devise_for :users

@@ -10,12 +10,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110216221724) do
+ActiveRecord::Schema.define(:version => 20110217000320) do
 
   create_table "events", :force => true do |t|
     t.date     "start"
     t.date     "end"
     t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "followings", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "story_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
