@@ -4,6 +4,9 @@ class StoriesController < ApplicationController
   
   def show
     @story = Story.find(params[:id])
+    if current_user
+      @following = @story.followings.find_by_user_id(current_user.id)
+    end
   end
   
   def index

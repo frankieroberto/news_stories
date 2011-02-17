@@ -14,3 +14,9 @@
 <% end %>
 
 <%= link_to "Add event", new_event_path(:story_id => @story.id) %>
+
+<% if @following %>
+	<%= button_to "Unfollow", following_path(@following), :method => :delete %>
+<% else %>
+	<%= button_to "Follow", followings_path(:story_id => @story.id) %>
+<% end %>
