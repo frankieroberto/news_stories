@@ -8,5 +8,5 @@ class User < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation, :remember_me
   
   has_many :followings
-  has_many :followed_stories, :through => :followings
+  has_many :followed_stories, :through => :followings, :source => :story
 end

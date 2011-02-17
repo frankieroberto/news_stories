@@ -1,5 +1,15 @@
 <%= content_tag("h1", "News") %>
 
+Events 
+
+<%= content_tag("ul") do %>
+	<% @events.each do |event| %>
+		<%= content_tag("li", link_to(event.name, event)) %>
+	<% end %>
+<% end %>
+
+
+Stories
 <%= content_tag("ul") do %>
 	<% @stories.each do |story| %>
 		<%= content_tag("li", link_to(story.name, story)) %>
