@@ -7,8 +7,8 @@
 			<%= content_tag("section") do %>
 				<%= stories(event) %>
 				<%= content_tag("header") do %>
-					<%= marker(event) %>
 					<%= content_tag("h2", link_to(event.name, event)) %>
+					<%= marker(event) %>
 				<% end %>
 			<% end %>
 		<% end %>
