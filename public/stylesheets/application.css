@@ -6,9 +6,17 @@ nav a {color: black;}
 /* Text styling */
 .new, .updated {font-variant: small-caps; }
 nav a {text-decoration: none;}
+.news section h1 {font-weight: normal;}
+
 
 /* Sizes */
 .site_name {font-size: 3em;}
+.news section h1 {font-size: 1em;}
+.news section header h2 {font-size: 1.2em;}
 
 /* Spacing */
 nav a {margin-right: 1em;}
+
+/* Layout */
+.news section {margin-bottom: 1em;}
+.news section header h2 {display: inline;} 

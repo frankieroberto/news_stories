@@ -1,21 +1,16 @@
 <%= content_tag("h1", "News") %>
 
 <% if current_user %>
-	Events 
 
-	<%= content_tag("ul") do %>
+	<%= content_tag("div", :class => :news) do %>
 		<% @events.each do |event| %>
-			<%= content_tag("li") do %>
-				<%= marker(event) %>
-				<%= link_to(event.name, event) %>
+			<%= content_tag("section") do %>
+				<%= stories(event) %>
+				<%= content_tag("header") do %>
+					<%= marker(event) %>
+					<%= content_tag("h2", link_to(event.name, event)) %>
+				<% end %>
 			<% end %>
 		<% end %>
-	<% end %>
-<% end %>
-
-Stories
-<%= content_tag("ul") do %>
-	<% @stories.each do |story| %>
-		<%= content_tag("li", link_to(story.name, story)) %>
 	<% end %>
 <% end %>
