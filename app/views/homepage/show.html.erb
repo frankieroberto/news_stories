@@ -5,7 +5,10 @@
 
 	<%= content_tag("ul") do %>
 		<% @events.each do |event| %>
-			<%= content_tag("li", link_to(event.name, event)) %>
+			<%= content_tag("li") do %>
+				<%= marker(event) %>
+				<%= link_to(event.name, event) %>
+			<% end %>
 		<% end %>
 	<% end %>
 <% end %>
