@@ -11,6 +11,10 @@ class Story < ActiveRecord::Base
   scope :recent, :order => "created_at DESC"
   
 
+  def recent_events
+    self.events.recent.limit(4)
+  end
+
   def update_name(name)
     
    self.previous_names.build(:name => self.name)

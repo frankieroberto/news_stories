@@ -2,7 +2,15 @@
 <%= content_tag("h1", "Stories") %>
 
 <% @stories.each do |story| %>
-	<%= content_tag("p") do %>
-		<%= marker(story) %> <%= link_to story.name, story %>
+	<%= content_tag("section") do %>
+		<%= content_tag("h2", link_to(story.name, story)) %>
+		<% story.recent_events.each do |event| %>
+			<%= content_tag("ul") do %>
+				<%= content_tag("li") do %>
+					<%= link_to(event.name, event) %>
+					<%= dates(event) %>
+				<% end %>
+			<% end %>
+		<% end %>
 	<% end %>
 <% end %>
