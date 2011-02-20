@@ -2,12 +2,13 @@
 span.new {color: red;}
 nav a {color: black;}
 .site_name {color: #005588;}
+.news section h1 a {color: #000077;}
 
 /* Text styling */
 .new, .updated {font-variant: small-caps; }
 nav a {text-decoration: none;}
 .news section h1 {font-weight: normal;}
-
+.news section h1 a {text-decoration: none;}
 
 /* Sizes */
 .site_name {font-size: 3em;}
