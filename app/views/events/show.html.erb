@@ -1,9 +1,16 @@
-<%= content_tag("h1", @event.name) %>
+<%= content_tag("article") do %>
 
-<% if @event.stories.size > 0 %>
-	<% @event.stories.each do |story| %>
-		<%= content_tag "p" do %>
-			<%= h("Part of ") + link_to(story.name, story) %>
+	<%= content_tag("header") do %>
+		<%= content_tag("h1", @event.name) %>
+		<%= content_tag("p", dates(@event, :format => :full), :class => :context) %>
+	<% end %>
+
+	<% if @event.stories.size > 0 %>
+		<% @event.stories.each do |story| %>
+			<%= content_tag "p" do %>
+				<%= h("Part of ") + link_to(story.name, story) %>
+			<% end %>
 		<% end %>
 	<% end %>
+	
 <% end %>

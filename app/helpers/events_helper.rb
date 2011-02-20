@@ -1,9 +1,14 @@
 module EventsHelper
 
-  def dates(event)
+  def dates(event, options = {:format => :short})
     
-    dates = event.start.to_s(:short)
-    dates += " – " + event.end.to_s(:short) unless event.start == event.end
+    if options[:format] == :full
+      dates = event.start.to_s(:long)
+      dates += " – " + event.end.to_s(:long) unless event.start == event.end      
+    else  
+      dates = event.start.to_s(:short)
+      dates += " – " + event.end.to_s(:short) unless event.start == event.end
+    end
     return dates
   end
   

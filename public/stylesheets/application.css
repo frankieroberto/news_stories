@@ -21,3 +21,5 @@ nav a {margin-right: 1em;}
 /* Layout */
 .news section {margin-bottom: 1em;}
 .news section header h2 {display: inline;} 
+article header h1 {margin-bottom: 0;}
+article header .context {margin-top: 0;}
