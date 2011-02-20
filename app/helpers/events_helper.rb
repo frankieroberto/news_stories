@@ -19,7 +19,7 @@ module EventsHelper
       stories << link_to(story.name, story)
     end
     
-    content_tag("h1", stories.join(", ").html_safe, :class => :stories)
+    stories.join(", ").html_safe
   end
 
 end
