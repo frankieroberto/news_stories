@@ -7,5 +7,6 @@ class StoryTest < ActiveSupport::TestCase
   should have_many :events
   should have_many :followings
   should have_many :users_following
+  should have_many :previous_names
 
 end
