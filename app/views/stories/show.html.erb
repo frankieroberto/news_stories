@@ -7,7 +7,7 @@
 
 	<%= content_tag("h2", "Timeline") %>
 
-	<% @story.events.recent.each do |event| %>
+	<% @story.events.in_reverse_date_order.each do |event| %>
 		<%= content_tag("p") do %>
 			<%= link_to event.name, event %> <%= dates(event) %>
 		<% end %>
