@@ -3,13 +3,15 @@
 <% if current_user %>
 
 	<%= content_tag("div", :class => :news) do %>
-		<% @events.each do |event| %>
+		<% @updated_stories.each do |story| %>
 			<%= content_tag("section") do %>
-				<%= stories(event) %>
-				<%= content_tag("header") do %>
-					<%= content_tag("h2", link_to(event.name, event)) %>
-					<%= marker(event) %>
-					<%= dates(event) %>					
+				<%= story.name %>
+				<% story.recent_events.each do |event|%>
+					<%= content_tag("header") do %>
+						<%= content_tag("h2", link_to(event.name, event)) %>
+						<%= marker(event) %>
+						<%= dates(event) %>					
+					<% end %>
 				<% end %>
 			<% end %>
 		<% end %>
