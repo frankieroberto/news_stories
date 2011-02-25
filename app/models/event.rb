@@ -8,7 +8,7 @@ class Event < ActiveRecord::Base
   has_many :stories, :through => :story_connections
   
   scope :in_reverse_date_order, :order => "start DESC"
-  scope :recent, :conditions => {:updated_at => (Time.now - 1.day)...Time.now}, :order => "updated_at DESC"
+  scope :recent, :conditions => {:updated_at => (Time.now - 1.day)...(Time.now + 1.hour)}, :order => "updated_at DESC"
   
 
 end
