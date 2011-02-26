@@ -10,7 +10,7 @@ class Story < ActiveRecord::Base
 
   scope :recent, :order => "updated_at DESC"
   
-  scope :recently_updated, :conditions => {:updated_at => (Time.now - 1.day)...Time.now}, :order => "updated_at DESC"
+  scope :recently_updated, :conditions => {:updated_at => (Time.now - 2.days)...Time.now}, :order => "updated_at DESC"
 
   def recent_events
     self.events.recent.limit(4)
