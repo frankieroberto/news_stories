@@ -2,9 +2,14 @@ require 'test_helper'
 
 class HomepageControllerTest < ActionController::TestCase
 
-  test "should get homepage" do
-    get :show
-    assert_response :success
+  context "when viewing homepage" do
+    
+    setup do
+      get :show
+    end
+        
+    should respond_with :success
+    should assign_to :top_stories
   end
 
 
