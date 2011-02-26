@@ -9,5 +9,18 @@ module StoriesHelper
       "".html_safe
     end      
   end
+  
+  def following_status(story)
+    
+    if current_user
+      
+      following = current_user.followings.first(:conditions => {:story_id => story.id})
+      
+      if following
+        return content_tag("span", "Following", :class => :following)
+      end  
+      
+    end
+  end
 
 end

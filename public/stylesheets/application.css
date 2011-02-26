@@ -4,6 +4,11 @@ nav a {color: black;}
 .site_name {color: #005588;}
 .news section h1 a {color: #000077;}
 .news section header {color: #777;}
+.following {color: green;}
+
+/* Font families */
+
+body {font-family: 'Baskerville', serif;}
 
 /* Text styling */
 .new, .updated {font-variant: small-caps; }
@@ -13,14 +18,24 @@ nav a {text-decoration: none;}
 
 /* Sizes */
 .site_name {font-size: 3em;}
-.news section h1 {font-size: 1em;}
-.news section header {font-size: .8em;}
-.news section header h2 {font-size: 1.4em;}
+
+.news section header {font-size: .9em;}
+.news section header h1 {font-size: 1.2em;}
+
+.news section header h2 {font-size: 1.3em;}
+.following {font-size: .8em;}
 
 /* Spacing */
 nav a {margin-right: 1em;}
 
 /* Layout */
-.news section {margin-bottom: 1em;}
-.news section header h2 {display: inline;} 
+
+body {padding: 1em;}
+
+.news section {margin-bottom: 2em;}
+.news section section {margin-bottom: 0em;}
+.news section header {margin-bottom: .5em;}
+.news section header h1,
+.news section header h2 {display: inline; margin-right: .5em;} 
+section header .new, section header .updated {margin-right: .5em;}
 article header * {margin-bottom: 0; margin-top: 0;}

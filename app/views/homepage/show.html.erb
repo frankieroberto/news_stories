@@ -4,11 +4,15 @@
 <%= content_tag("div", :class => :news) do %>
 	<% @top_stories.each do |story| %>		
 		<%= content_tag("section") do %>
-			<%= link_to(story.name, story) %> <%= marker(story) %>
+			<%= content_tag("header") do %>
+				<%= content_tag("h1", link_to(story.name, story)) %> <%= marker(story) %> <%= following_status(story) %>
+			<% end %>
 			<% story.recent_events.each do |event|%>
-				<%= content_tag("header") do %>
-					<%= content_tag("h2", link_to(event.name, event)) %>
-					<%= dates(event) %>					
+				<%= content_tag("section") do %>
+					<%= content_tag("header") do %>
+						<%= content_tag("h2", link_to(event.name, event)) %>
+						<%= dates(event) %>					
+					<% end %>
 				<% end %>
 			<% end %>
 		<% end %>
