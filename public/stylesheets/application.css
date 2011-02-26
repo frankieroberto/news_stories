@@ -6,6 +6,8 @@ nav a {color: black;}
 .news section header {color: #777;}
 .following {color: green;}
 
+.field_with_errors label {color: red;}
+
 /* Font families */
 
 body {font-family: 'Baskerville', serif;}

@@ -15,6 +15,20 @@ class EventsController < ApplicationController
     @story = Story.find(params[:story_id]) if params[:story_id]
   end
   
+  def edit
+    @event = Event.find(params[:id])
+  end
+  
+  def update
+    @event = Event.find(params[:id])
+    
+    if @event.update_attributes(params[:event])
+      redirect_to @event
+    else
+      render :edit
+    end
+  end
+  
   def create
     @event = Event.new(params[:event])
     
