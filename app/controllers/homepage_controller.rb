@@ -1,11 +1,9 @@
 class HomepageController < ApplicationController
 
   def show
-    
-    if current_user
-      
-      @updated_stories = current_user.followed_stories.recently_updated
-    end
+          
+    @top_stories = Story.recently_updated.all(:limit => 8)
+
   end
 
 end

@@ -1,16 +1,14 @@
-<%= content_tag("h1", "News") %>
+<%= content_tag("h1", "Home") %>
 
-<% if current_user %>
 
-	<%= content_tag("div", :class => :news) do %>
-		<% @updated_stories.each do |story| %>
-			<%= content_tag("section") do %>
-				<%= story.name %> <%= marker(story) %>
-				<% story.recent_events.each do |event|%>
-					<%= content_tag("header") do %>
-						<%= content_tag("h2", link_to(event.name, event)) %>
-						<%= dates(event) %>					
-					<% end %>
+<%= content_tag("div", :class => :news) do %>
+	<% @top_stories.each do |story| %>		
+		<%= content_tag("section") do %>
+			<%= link_to(story.name, story) %> <%= marker(story) %>
+			<% story.recent_events.each do |event|%>
+				<%= content_tag("header") do %>
+					<%= content_tag("h2", link_to(event.name, event)) %>
+					<%= dates(event) %>					
 				<% end %>
 			<% end %>
 		<% end %>

@@ -8,7 +8,7 @@ class Story < ActiveRecord::Base
   has_many :users_following, :through => :followings
   has_many :previous_names, :class_name => "PreviousStoryName", :dependent => :destroy
 
-  scope :recent, :order => "created_at DESC"
+  scope :recent, :order => "updated_at DESC"
   
   scope :recently_updated, :conditions => {:updated_at => (Time.now - 1.day)...Time.now}, :order => "updated_at DESC"
 
