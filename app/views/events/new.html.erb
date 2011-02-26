@@ -19,7 +19,7 @@
 			<%= f.date_select :end %>
 		<% end %>
 				
-		<%= hidden_field_tag :story_id, @story.id %>
+		<%= hidden_field_tag :story_id, @story.id if @story %>
 	<% end %>
 
 	<%= f.submit "Add" %>
