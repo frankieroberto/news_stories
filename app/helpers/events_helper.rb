@@ -15,6 +15,10 @@ module EventsHelper
       dates = time_tag(event.start.to_s(:short), event.start)
       dates += " – " + time_tag(event.end.to_s(:short), event.end) unless event.start == event.end
     end
+    
+    if event.end.year != Date.today.year
+      dates += " ".html_safe + event.end.year.to_s
+    end
     return dates
   end
   
