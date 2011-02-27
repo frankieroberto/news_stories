@@ -63,7 +63,16 @@ class EventsControllerTest < ActionController::TestCase
       
     end
     
-    
+    context "when updating an event" do
+      
+      setup do        
+        put :update, :id => events(:london_underground_bombings).id, :event => {:name => "New name", :start => Date.today, :end => Date.today}
+      end
+      
+      should respond_with :redirect
+      should redirect_to("the event page") {event_path(events(:london_underground_bombings).id)}
+      
+    end
     
   end
   
