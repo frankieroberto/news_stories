@@ -52,7 +52,20 @@ class EventsControllerTest < ActionController::TestCase
       
     end
     
+    context "when posting a valid new event" do
+      
+      setup do
+        post :create, :event => {:name => "New event", :start => Date.today, :end => Date.today}
+      end
+      
+      should respond_with :redirect
+      should redirect_to("event page") {event_path(assigns(:event))}      
+      
+    end
+    
+    
     
   end
+  
 
 end
