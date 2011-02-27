@@ -76,5 +76,26 @@ class EventsControllerTest < ActionController::TestCase
     
   end
   
+  context "when not signed in" do
+    
+    
+    context "when requesting the add event page" do
+
+      setup { get :new }
+      
+      should redirect_to("login page") {new_user_session_path}      
+      
+    end
+    
+    context "when requesting the edit event page" do
+
+      setup { get :edit, {:id => events(:london_underground_bombings).id} }
+      
+      should redirect_to("login page") {new_user_session_path}      
+    
+    end
+    
+  end
+  
 
 end
