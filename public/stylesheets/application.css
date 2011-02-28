@@ -34,10 +34,10 @@ nav a {margin-right: 1em;}
 
 body {padding: 1em;}
 
-.news section {margin-bottom: 2em;}
-.news section section {margin-bottom: 0em;}
-.news section header {margin-bottom: .5em;}
-.news section header h1,
-.news section header h2 {display: inline; margin-right: .5em;} 
+section {margin-bottom: 2em;}
+section section {margin-bottom: 0em;}
+section header {margin-bottom: .5em;}
+section header h1,
+section header h2 {display: inline; margin-right: .5em;} 
 section header .new, section header .updated {margin-right: .5em;}
 article header * {margin-bottom: 0; margin-top: 0;}
