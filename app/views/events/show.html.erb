@@ -6,5 +6,8 @@
 		<%= content_tag("p", dates(@event, :format => :full), :class => :context) %>
 	<% end %>
 
+	<%= content_tag("div", :class => :description) do %>
+		<%= simple_format(@event.description) %>
+	<% end %>
 	
 <% end %>

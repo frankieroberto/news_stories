@@ -18,7 +18,14 @@
 			<%= f.label :end %>
 			<%= f.date_select :end %>
 		<% end %>
-				
+		
+		<% content_tag("div") do%>
+			<%= content_tag("div") do %>
+				<%= f.label :description %>
+			<% end %>
+			<%= f.text_area :description %>
+		<% end %>
+		
 		<%= hidden_field_tag :story_id, @story.id if @story %>
 	<% end %>
 
